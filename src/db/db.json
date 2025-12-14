@@ -1,0 +1,126 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": 2,
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    },
+    {
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com",
+      "id": 3
+    }
+  ],
+
+    "faqs": [
+    {
+      "id": 1,
+      "pergunta": "O que é este site?",
+      "resposta": "É uma plataforma comunitária para ajudar usuários a identificar riscos e acessar informações de segurança."
+    },
+    {
+      "id": 2,
+      "pergunta": "Meus dados estão seguros aqui?",
+      "resposta": "Sim, utilizamos criptografia e seguimos normas de privacidade."
+    },
+    {
+      "id": 3,
+      "pergunta": "Como encontro locais de ajuda próximos a mim?",
+      "resposta": "Use a aba 'Locais próximos' e permita o acesso à sua localização."
+    },
+    {
+      "id": 4,
+      "pergunta": "Não consigo acessar minha conta, o que fazer?",
+      "resposta": "Clique em 'Esqueci minha senha' ou entre em contato pelo suporte."
+    }
+  ],
+  
+  "pontosMapa": [
+    {
+      "id": 101,
+      "latitude": -19.949339,
+      "longitude": -44.051832,
+      "tipo": "risco_alto",
+      "titulo": "PERIGO! - Riacho das Pedras (Roubo)",
+      "detalhe": "Próximo à Av. Rio Volga. Foco em roubos a pedestres no final da tarde, especialmente visando bolsas e celulares. Mantenha distância do celular visível."
+    },
+    {
+      "id": 102,
+      "latitude": -19.920979,
+      "longitude": -44.054726,
+      "tipo": "risco_alto",
+      "titulo": "PERIGO! - Parque São João (Assalto)",
+      "detalhe": "Nas imediações do parque. Relatos de assaltos noturnos em áreas com pouca iluminação. Mantenha cautela ao estacionar ou transitar a pé após escurecer."
+    },
+    {
+      "id": 103,
+      "latitude": -19.943728,
+      "longitude": -44.033648,
+      "tipo": "risco_alto",
+      "titulo": "PERIGO! - Av. João César de Oliveira (Furto)",
+      "detalhe": "Próximo ao Bairro Eldorado. Alto índice de furto de objetos em veículos parados e furtos de celular por 'chavismo' em comércios. Não deixe mochilas à mostra."
+    },
+    {
+      "id": 104,
+      "latitude": -19.959451,
+      "longitude": -44.023200,
+      "tipo": "risco_alto",
+      "titulo": "PERIGO! - Bairro Invasão/Loteamento (Invasão/Sequestro Relâmpago)",
+      "detalhe": "Área residencial com registro de invasão domiciliar e sequestros-relâmpago noturnos. Evite rotas alternativas desconhecidas ao voltar para casa."
+    },
+    {
+      "id": 201, 
+      "latitude": -19.92455,
+      "longitude": -44.07141,
+      "tipo": "posto_policial",
+      "titulo": "18° Batalhão da Policia Militar (Referência)",
+      "detalhe": "Ponto de apoio e segurança para a comunidade."
+    }
+  ],
+
+  "contatos": [
+    {
+      "nome": "Polícia Militar",
+      "numero": "190",
+      "link": "policia-militar.html"
+    },
+    {
+      "nome": "Polícia Civil",
+      "numero": "197",
+      "link": "policia-civil.html"
+    },
+    {
+      "nome": "SAMU",
+      "numero": "192",
+      "link": "samu.html"
+    },
+    {
+      "nome": "Bombeiros",
+      "numero": "193",
+      "link": "bombeiros.html"
+    },
+    {
+      "nome": "Denúncia Anônima",
+      "numero": "181",
+      "link": "denuncia-anonima.html"
+    },
+    {
+      "nome": "Guarda Civil",
+      "numero": "153",
+      "link": "guarda-civil.html"
+    }
+  ]
+}
+
+

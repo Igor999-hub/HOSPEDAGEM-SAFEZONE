@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Favoritos</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/contatos.css" />
+</head>
+<body>
+
+  <style>
+    header {
+    box-shadow: 0 3px 4px black;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: auto; 
+    padding: 18px 18px; 
+    background-color: rgb(182, 1, 1); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.logo-area {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.logo-area img {
+    height: 8.4rem; 
+    width: 8.4rem;
+}
+
+.logo-area h1 {
+    font-size: 2.3rem;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 3px 3px black;
+}
+
+.menu-header ul {
+    display: flex;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.menu-header li {
+    margin: 0 40px; 
+    font-size: 1.5rem;
+    text-shadow: 3px 3px black;
+
+}
+
+.menu-header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu-header a:hover {
+text-shadow: none;
+color: black;
+}
+
+.profile-photo img {
+    height: 6rem; 
+    width: 6rem;
+    border-radius: 50%; 
+    object-fit: cover; 
+    padding-right: 24px;
+    cursor: pointer;
+}
+  </style>
+  
+  
+  <header>
+    <section class="header-content">
+        
+        <div class="logo-area">
+            <img src="assets/images/logotiaw.png" alt="Logo SafeZone">
+            <h1>SafeZone</h1>
+        </div>
+
+        <nav class="menu-header">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comunidade.html">Comunidade</a></li>
+                <li><a href="contatos.html">Contatos Urgentes</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+
+        <div class="profile-photo">
+            <img src="assets/images/fotoperfil.png" alt="Foto de Perfil">
+        </div>
+    </section>
+</header>
+
+  <main style="padding:40px; display:flex; flex-direction:column; gap:24px; align-items:flex-start;">
+    
+    <div class="info">
+      <h2>Meus Favoritos</h2>
+      <p>Contatos que você marcou com ☆ na página principal.</p>
+    </div>
+
+    <div id="favoritosLista" class="favoritos-lista">
+    </div>
+
+    <a href="contatos.html" class="link-contato" style="background:#5c0000; padding:10px 20px; border-radius:20px;">
+      ← Voltar
+    </a>
+
+  </main>
+
+  <script>
+    function getFavoritos() {
+      return JSON.parse(localStorage.getItem("favoritos") || "[]");
+    }
+
+    function removerFavorito(nome) {
+      let favs = getFavoritos().filter(f => f.nome !== nome);
+      localStorage.setItem("favoritos", JSON.stringify(favs));
+      renderFavoritos();
+    }
+
+    function renderFavoritos() {
+      const lista = document.getElementById("favoritosLista");
+      lista.innerHTML = "";
+
+      const favoritos = getFavoritos();
+
+      if (favoritos.length === 0) {
+        lista.innerHTML = "<p style='color:#000;'>Nenhum favorito salvo ainda.</p>";
+        return;
+      }
+
+      favoritos.forEach(fav => {
+        const div = document.createElement("div");
+        div.classList.add("favorito-item");
+
+        const link = document.createElement("a");
+        link.textContent = `${fav.nome}: ${fav.numero}`;
+        link.href = fav.link ? fav.link : "#";
+        link.target = "_self";
+
+        const btn = document.createElement("button");
+        btn.classList.add("remover-favorito");
+        btn.textContent = "✖";
+        btn.title = "Remover dos favoritos";
+        btn.onclick = () => removerFavorito(fav.nome);
+
+        div.appendChild(link);
+        div.appendChild(btn);
+        lista.appendChild(div);
+      });
+    }
+
+    renderFavoritos();
+  </script>
+<footer class="site-footer">
+    <div class="footer-content">
+        <nav class="footer-nav">
+            <a href="sobre.html">Sobre nós</a>
+            <a href="contato.html">Contate-nos</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="termos.html">Termos e Condições</a>
+            <a href="privacidade.html">Declaração de Privacidade</a>
+        </nav>
+        
+        <hr class="footer-divider">
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 SafeZone. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

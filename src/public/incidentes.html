@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SZ | Estatísticas de Segurança</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/styles_incidentes.css"/>
+  <!-- Chart.js via CDN for quick charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="assets/js/app_incidentes.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <section class="header-content">
+        
+        <div class="logo-area">
+            <img src="assets/images/logotiaw.png" alt="Logo SafeZone">
+            <h1>SafeZone</h1>
+        </div>
+
+        <nav class="menu-header">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comunidade.html">Comunidade</a></li>
+                <li><a href="contatos.html">Contatos Urgentes</a></li>
+            </ul>
+        </nav>
+
+        <div class="profile-photo">
+            <img src="assets/images/fotoperfil.png" alt="Foto de Perfil">
+        </div>
+    </section>
+</header>
+
+<div class="link-voltar"><a href="index.html">← Voltar para Home</a></div>
+
+  <main class="container">
+    <section class="grid">
+      <article class="card" style="grid-column:1/-1">
+        <h3>Visão geral</h3>
+        <div class="kpis" id="kpis">
+          <!-- KPIs render -->
+        </div>
+        <p class="small">Fonte: <em>data.json</em> + relatos da comunidade (armazenados localmente no seu navegador).</p>
+      </article>
+
+      <article class="card">
+        <h3>Incidentes por tipo</h3>
+        <canvas id="byType"></canvas>
+      </article>
+
+      <article class="card">
+        <h3>Tendência mensal</h3>
+        <canvas id="byMonth"></canvas>
+      </article>
+
+      <article class="card">
+        <h3>Distribuição por turno</h3>
+        <canvas id="byShift"></canvas>
+      </article>
+
+      <article class="card" style="grid-column:1/-1">
+        <h3>Relatar novo incidente</h3>
+        <form id="incidentForm" class="form" autocomplete="off">
+          <div class="field" style="grid-column:span 2;">
+            <label for="tipo">Tipo</label>
+            <select id="tipo" required>
+              <option value="">Selecione...</option>
+              <option>Roubo</option>
+              <option>Furto</option>
+              <option>Agressao</option>
+              <option>Assedio</option>
+              <option>Vandalismo</option>
+            </select>
+          </div>
+          <div class="field" style="grid-column:span 2;">
+            <label for="bairro">Bairro</label>
+            <input id="bairro" type="text" placeholder="Ex.: Centro" required/>
+          </div>
+          <div class="field" style="grid-column:span 1;">
+            <label for="data">Data</label>
+            <input id="data" type="date" required/>
+          </div>
+          <div class="field" style="grid-column:span 1;">
+            <label for="turno">Turno</label>
+            <select id="turno" required>
+              <option value="">Selecione...</option>
+              <option>Manhã</option>
+              <option>Tarde</option>
+              <option>Noite</option>
+              <option>Madrugada</option>
+            </select>
+          </div>
+          <textarea id="descricao" placeholder="Descrição (opcional, não inclua nomes ou dados pessoais)."></textarea>
+          <div class="actions">
+            <button class="btn btn-outline" type="button" id="clearBtn">Limpar</button>
+            <button class="btn btn-primary" type="submit">Adicionar aos gráficos</button>
+          </div>
+          <p class="helper">As informações adicionadas ficam salvas no seu navegador (localStorage). Você pode exportar o JSON atualizado pelo botão no topo.</p>
+          <div class="disclaimer">
+            <strong>Aviso:</strong> Este site tem caráter educativo e orientativo. Não substitui o atendimento da polícia,
+            nem de profissionais de saúde ou serviços de emergência.
+          </div>
+        </form>
+      </article>
+
+      <article class="card" style="grid-column:1/-1">
+        <h3>Relatos recentes</h3>
+        <table class="table" id="recentTable">
+          <thead><tr><th>Data</th><th>Bairro</th><th>Tipo</th><th>Turno</th><th>Descrição</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+        <nav class="footer-nav">
+            <a href="sobre.html">Sobre nós</a>
+            <a href="contato.html">Contate-nos</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="termos.html">Termos e Condições</a>
+            <a href="privacidade.html">Declaração de Privacidade</a>
+        </nav>
+        
+        <hr class="footer-divider">
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 SafeZone. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeZone - Guia de Emergências</title>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/guia_style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script src="assets/js/app.js" defer></script>       
+    <script src="assets/js/guia_script.js" defer></script> 
+</head>
+
+<body>
+
+    <header>
+        <section class="header-content">
+            <div class="logo-area">
+                <img src="assets/images/logotiaw.png" alt="Logo SafeZone">
+                <h1>SafeZone</h1>
+            </div>
+
+            <nav class="menu-header">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                    <li><a href="contatos.html">Contatos Urgentes</a></li>
+                </ul>
+            </nav>
+
+            <div class="profile-photo">
+                <img src="assets/images/fotoperfil.png" alt="Foto de Perfil">
+            </div>
+        </section>
+    </header>
+
+<div class="link-voltar"><a href="index.html">← Voltar para Home</a></div>
+
+    <main class="site-content">
+        
+
+        <div class="guide-wrapper">
+            <div class="title-container">
+                <h2>Guia de Emergências</h2>
+                <button id="open-bo-modal" class="bo-button">
+                    <i class="fas fa-file-contract"></i> Registrar B.O
+                </button>
+            </div>
+
+            <div class="toolbar">
+                <input id="search" type="search" placeholder="Pesquisar ocorrência (ex: Roubo)..." />
+                <select id="filter">
+                    <option value="">Todas as categorias</option>
+                    <option value="segurança">Segurança</option>
+                    <option value="fraude">Fraude</option>
+                    <option value="direitos">Direitos</option>
+                    <option value="animais">Animais</option>
+                </select>
+            </div>
+
+            <div id="cards-container" class="grid-container">
+                </div>
+        </div>
+
+    </main>
+
+    
+
+    <div id="bo-modal" class="modal-overlay bo-overlay">
+        <div class="modal-content">
+            <span id="close-bo-modal" class="modal-close">&times;</span>
+            <h2>Como Registrar um B.O.</h2>
+            <p>O Boletim de Ocorrência (B.O.) online pode ser usado para furtos, roubos, perda de documentos, etc.</p>
+            <p>Tenha em mãos seus dados pessoais (RG, CPF) e endereço.</p>
+            <a href="https://delegaciavirtual.sids.mg.gov.br/sxgn/" class="modal-link-button" target="_blank">
+                Ir para Delegacia Virtual
+            </a>
+        </div>
+    </div>
+
+    <dialog id="detailModal" class="detail-dialog">
+        <button id="closeDetailModal" class="close-dialog" aria-label="Fechar">×</button>
+        <article id="detailContent"></article>
+    </dialog>
+
+</body>
+<footer class="site-footer">
+    <div class="footer-content">
+        <nav class="footer-nav">
+            <a href="sobre.html">Sobre nós</a>
+            <a href="contato.html">Contate-nos</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="termos.html">Termos e Condições</a>
+            <a href="privacidade.html">Declaração de Privacidade</a>
+        </nav>
+    
+        <hr class="footer-divider">
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 SafeZone. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissionais Credenciados</title>
+    <link rel="stylesheet" href="assets/css/style.profissionais.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<style>
+    /* Configuração geral do Footer */
+.site-footer {
+    background-color: #525252; /* Cor cinza escura similar à imagem */
+    color: #ffffff;            /* Texto branco */
+    padding: 20px 0;           /* Espaçamento interno (cima/baixo) */
+    font-family: Arial, sans-serif; /* Fonte padrão limpa */
+    width: 100%;
+    margin-top: auto;          /* Ajuda a empurrar o footer para baixo se usar flexbox no body */
+}
+
+.footer-content {
+    max-width: 1200px;         /* Limita a largura para não ficar muito esticado em telas grandes */
+    margin: 0 auto;            /* Centraliza o conteúdo na tela */
+    padding: 0 20px;           /* Margem lateral de segurança */
+}
+
+/* Estilo dos Links (Sobre nós, Contate-nos, etc) */
+.footer-nav {
+    display: flex;             /* Coloca os itens lado a lado */
+    gap: 30px;                 /* Espaço entre cada link */
+    margin-bottom: 20px;       /* Espaço entre os links e a linha divisória */
+    flex-wrap: wrap;           /* Permite que os links quebrem linha em celular */
+}
+
+.footer-nav a {
+    text-decoration: none;     /* Remove o sublinhado padrão do link */
+    color: #ffffff;            /* Cor do link branca */
+    font-size: 16px;
+    transition: color 0.3s;    /* Efeito suave ao passar o mouse */
+}
+
+.footer-nav a:hover {
+    color: #cccccc;            /* Muda levemente a cor ao passar o mouse */
+}
+
+/* Linha divisória fina */
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #777; /* Linha cinza clara sutil */
+    margin-bottom: 20px;
+}
+
+/* Área do Copyright */
+.footer-copyright {
+    text-align: center;        /* Centraliza o texto do copyright */
+    font-size: 14px;
+    color: #dcdcdc;            /* Um branco levemente mais apagado */
+}
+</style>
+
+<body>
+
+    <header>
+    <section class="header-content">
+        
+        <div class="logo-area">
+            <img src="assets/images/logotiaw.png" alt="Logo SafeZone">
+            <h1>SafeZone</h1>
+        </div>
+
+        <nav class="menu-header">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comunidade.html">Comunidade</a></li>
+                <li><a href="contatos.html">Contatos Urgentes</a></li>
+            </ul>
+        </nav>
+
+        <div class="profile-photo">
+            <img src="assets/images/fotoperfil.png" alt="Foto de Perfil">
+        </div>
+    </section>
+</header>
+
+<div class="link-voltar"><a href="index.html">← Voltar para Home</a></div>
+
+<div class="titulo-profissionais">
+<h1>Nossos Profissionais Credenciados</h1>
+</div>
+
+
+<div class="search-area">
+    <input 
+        type="text" 
+        id="input-busca" 
+        placeholder="Buscar por nome, profissão ou especialidade..."
+        title="Busque por nome, profissão ou especialidades"
+    >
+    <i class="fas fa-search search-icon"></i>
+</div>
+
+<main id="profissionais-container" class="container-cards"></main>
+<footer class="site-footer">
+    <div class="footer-content">
+        <nav class="footer-nav">
+            <a href="sobre.html">Sobre nós</a>
+            <a href="contato.html">Contate-nos</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="termos.html">Termos e Condições</a>
+            <a href="privacidade.html">Declaração de Privacidade</a>
+        </nav>
+        
+        <hr class="footer-divider">
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 SafeZone. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/dadosprofissionais.js"></script>
+</body>
+</html>

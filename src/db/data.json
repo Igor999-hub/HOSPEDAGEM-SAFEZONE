@@ -1,0 +1,82 @@
+{
+  "categorias": [
+    {
+      "id": "roubo",
+      "titulo": "Roubo",
+      "tag": "segurança",
+      "img": "https://tse2.mm.bing.net/th/id/OIP.TEGWsEX7WsRx-ajzBCFZqwHaHa?pid=Api&P=0&h=180",
+      "disque": ["190 - Polícia Militar", "197 - Polícia Civil"],
+      "o_que_fazer": [
+        "Afaste-se do local com segurança, não reaja.",
+        "Em local seguro, ligue 190 e registre boletim de ocorrência.",
+        "Bloqueie cartões/celular (IMEI *#06#) e troque senhas."
+      ],
+      "observacoes": "Se houver feridos, acione 192 (SAMU)."
+    },
+    {
+      "id": "furto",
+      "titulo": "Furto",
+      "tag": "segurança",
+      "img": "https://img.freepik.com/premium-vector/cartoon-thief-walking-carefully-funny-burglar_88465-1766.jpg?w=2000",
+      "disque": ["190 - Polícia Militar", "197 - Polícia Civil"],
+      "o_que_fazer": [
+        "Mantenha a calma e verifique sua segurança.",
+        "Registre o boletim de ocorrência (delegacia ou online no site da PC).",
+        "Bloqueie imediatamente cartões e contas comprometidas."
+      ],
+      "observacoes": "Anote série/IMEI de bens para facilitar a recuperação."
+    },
+    {
+      "id": "sequestro",
+      "titulo": "Sequestro",
+      "tag": "segurança",
+      "img": "https://media.istockphoto.com/id/1359349255/pt/vetorial/kidnapped-girl-criminal-scene-illustration-vector.jpg?s=612x612&w=is&k=20&c=xBHqdZVYRiYXHXZU_0SGwSflilPXnZgsBhZr1mW6mjo=",
+      "disque": ["190 - Polícia Militar", "197 - Polícia Civil"],
+      "o_que_fazer": [
+        "Em andamento: não confronte. Procure ajuda discreta e ligue 190.",
+        "Após o fato: preserve ligações e mensagens para investigação.",
+        "Não faça pagamentos sem orientação policial."
+      ],
+      "observacoes": "Evite divulgar informações em redes sociais."
+    },
+    {
+      "id": "estelionato",
+      "titulo": "Estelionato",
+      "tag": "fraude",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5_eEtX_X03TgMKkCnr1tevC8v86yrlJWHoA&s",
+      "disque": ["197 - Polícia Civil", "Consumidor: 151 - Procon (quando aplicável)"],
+      "o_que_fazer": [
+        "Interrompa contato com o golpista e salve provas (prints, e-mails).",
+        "Comunique o banco/plataforma e solicite bloqueio.",
+        "Registre o boletim de ocorrência e dispute a transação."
+      ],
+      "observacoes": "Desconfie de links, QR codes e ‘suporte’ que pede senhas."
+    },
+    {
+      "id": "violencia_domestica",
+      "titulo": "Violência Doméstica",
+      "tag": "direitos",
+      "img": "https://www.cnj.jus.br/wp-content/uploads/2022/06/violencia-contra-a-mulher-bancodeimagens.jpg",
+      "disque": ["190 - Emergência", "180 - Central de Atendimento à Mulher"],
+      "o_que_fazer": [
+        "Se houver risco, ligue 190 imediatamente.",
+        "Busque medida protetiva e atendimento na Delegacia da Mulher.",
+        "Procure rede de apoio e serviços de saúde/assistência."
+      ],
+      "observacoes": "Guarde provas e não se isole; peça ajuda."
+    },
+    {
+      "id": "maus_tratos_animais",
+      "titulo": "Maus-tratos a Animais",
+      "tag": "animais",
+      "img": "https://semeupetfalasse.wordpress.com/wp-content/uploads/2022/02/maus-tratos.jpg",
+      "disque": ["190 - Quando em flagrante", "Órgão municipal/IBAMA conforme cidade"],
+      "o_que_fazer": [
+        "Registre fotos/vídeos sem se colocar em risco.",
+        "Ligue 190 em flagrante ou acione o órgão de fiscalização local.",
+        "Registre boletim de ocorrência."
+      ],
+      "observacoes": "Lei 9.605/98 prevê crime de maus-tratos."
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header {
+    box-shadow: 0 3px 4px black;
+}
+
+/* Make footer stick to bottom when content is short */
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; min-height: 100vh; }
+main.site-content { flex: 1; }
+
+.header-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: auto; 
+    padding: 18px 18px; 
+    background-color: rgb(182, 1, 1); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.logo-area {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.logo-area img {
+    height: 8.4rem; 
+    width: 8.4rem;
+}
+
+.logo-area h1 {
+    font-size: 2.3rem;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 3px 3px black;
+}
+
+.menu-header ul {
+    display: flex;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.menu-header li {
+    margin: 0 40px; 
+    font-size: 1.5rem;
+    text-shadow: 3px 3px black;
+
+}
+
+.menu-header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu-header a:hover {
+text-shadow: none;
+color: black;
+}
+
+.profile-photo img {
+    height: 6rem; 
+    width: 6rem;
+    border-radius: 50%; 
+    object-fit: cover; 
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+/* CARDS */
+
+#bloco-funcionalidades {
+    padding: 1.4rem;
+}
+
+#cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.card-link {
+    width: 80%;
+    text-decoration: none;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    padding: 25px 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.card-text h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #222;
+}
+
+.card-text p {
+    margin-top: 8px;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+
+/* AVISO */
+
+.aviso {
+    
+    width: 100%; 
+    background-color: #fff3cd; 
+    color: #856404; 
+    padding: 35px 20px; 
+    text-align: center; 
+    margin: 0; 
+    
+    font-size: 1.2em;
+    border-bottom: 1px solid #ffeeba;
+    box-sizing: border-box;  
+}
+
+.aviso p {
+    margin: 0; 
+}
+
+.aviso p strong {
+    font-weight: bold;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: rgb(92, 92, 92);
+    padding: 30px;
+}
+
+.linhaum-rodape {
+   
+    border-bottom: 1px solid #777; 
+    padding-bottom: 20px; 
+    margin-bottom: 20px; 
+}
+
+.linhaum-rodape ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linhaum-rodape ul li a {
+    text-decoration: none;
+    margin-right: 45px; 
+    color: #fff; 
+    font-size: 20px;
+}
+
+ 
+.linhadois-rodape ul {
+    display: flex;
+    list-style: none;
+}
+
+.linhadois-rodape ul li a {
+    text-decoration: none;
+    color:#fff;
+    margin-right: 45px;
+    font-size: 20px;
+}
+
+.ultimafrase {
+    padding-top: 45px;
+    text-align: center;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+
+    .card-link {
+        width: 95%;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+
+    .card img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .card-text h3 {
+        font-size: 1.25rem;
+    }
+
+    .card-text p {
+        font-size: 0.95rem;
+    }
+}
+
+.hero {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #2b2b2b, #1e1e1e);
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #db2534;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.hero-btn:hover {
+    background-color: #c61927;
+}
+
+.section-title {
+    text-align: center;
+    margin: 50px 0 20px;
+    font-size: 2rem;
+    color: #222;
+}
+
+
+/* ---------Matheus-------- */
+
+.faq-page-title {
+    font-size: 2.3rem;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 2px 2px #ccc;
+    padding-left: 90px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+body.dark-mode .faq-page-title {
+    color: #e0e0e0;
+    text-shadow: 3px 3px black;
+}
+
+.faq-page-layout {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    padding-left: 0;
+    padding-right: 40px;
+    gap: 60px;
+}
+
+.faq-left-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    left: -60px;
+}
+
+.faq-right-column {
+    flex: 2;
+    min-width: 300px;
+}
+
+.faq-warning-box {
+    background-color: rgb(129, 0, 0);
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-shadow: 2px 2px black;
+}
+
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background-color: rgb(182, 1, 1);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 2px 2px black;
+}
+
+.faq-question::after {
+    content: '\f078';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+}
+
+.faq-answer {
+    display: none;
+    padding: 20px 25px;
+    background-color: #9B0000;
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* aberto */
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(180deg);
+    content: '\f078';
+}
+
+.link-voltar, .link-voltar a{
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.link-voltar a:hover {
+    color:rgb(182, 1, 1);
+}
+
+
+/* ---------Matheus-------- */
+
+/* Configuração geral do Footer */
+.site-footer {
+    background-color: #525252; /* Cor cinza escura similar à imagem */
+    color: #ffffff;            /* Texto branco */
+    padding: 20px 0;           /* Espaçamento interno (cima/baixo) */
+    font-family: Arial, sans-serif; /* Fonte padrão limpa */
+    width: 100%;
+    margin-top: auto;          /* Ajuda a empurrar o footer para baixo se usar flexbox no body */
+}
+
+.footer-content {
+    max-width: 1200px;         /* Limita a largura para não ficar muito esticado em telas grandes */
+    margin: 0 auto;            /* Centraliza o conteúdo na tela */
+    padding: 0 20px;           /* Margem lateral de segurança */
+}
+
+/* Estilo dos Links (Sobre nós, Contate-nos, etc) */
+.footer-nav {
+    display: flex;             /* Coloca os itens lado a lado */
+    gap: 30px;                 /* Espaço entre cada link */
+    margin-bottom: 20px;       /* Espaço entre os links e a linha divisória */
+    flex-wrap: wrap;           /* Permite que os links quebrem linha em celular */
+}
+
+.footer-nav a {
+    text-decoration: none;     /* Remove o sublinhado padrão do link */
+    color: #ffffff;            /* Cor do link branca */
+    font-size: 16px;
+    transition: color 0.3s;    /* Efeito suave ao passar o mouse */
+}
+
+.footer-nav a:hover {
+    color: #cccccc;            /* Muda levemente a cor ao passar o mouse */
+}
+
+/* Linha divisória fina */
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #777; /* Linha cinza clara sutil */
+    margin-bottom: 20px;
+}
+
+/* Área do Copyright */
+.footer-copyright {
+    text-align: center;        /* Centraliza o texto do copyright */
+    font-size: 14px;
+    color: #dcdcdc;            /* Um branco levemente mais apagado */
+}

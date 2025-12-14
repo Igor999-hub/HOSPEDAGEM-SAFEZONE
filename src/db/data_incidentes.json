@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "fonte": "Dados fictícios para demonstração",
+    "atualizado_em": "2025-11-10"
+  },
+  "incidentes": [
+    {
+      "id": 1,
+      "tipo": "Roubo",
+      "bairro": "Centro",
+      "data": "2025-10-02",
+      "turno": "Noite"
+    },
+    {
+      "id": 2,
+      "tipo": "Furto",
+      "bairro": "Nova Suíça",
+      "data": "2025-10-05",
+      "turno": "Tarde"
+    },
+    {
+      "id": 3,
+      "tipo": "Agressao",
+      "bairro": "Centro",
+      "data": "2025-10-11",
+      "turno": "Noite"
+    },
+    {
+      "id": 4,
+      "tipo": "Assedio",
+      "bairro": "Industrial",
+      "data": "2025-10-12",
+      "turno": "Noite"
+    },
+    {
+      "id": 5,
+      "tipo": "Vandalismo",
+      "bairro": "Centro",
+      "data": "2025-10-13",
+      "turno": "Madrugada"
+    },
+    {
+      "id": 6,
+      "tipo": "Roubo",
+      "bairro": "Pindorama",
+      "data": "2025-10-18",
+      "turno": "Noite"
+    },
+    {
+      "id": 7,
+      "tipo": "Furto",
+      "bairro": "Centro",
+      "data": "2025-10-20",
+      "turno": "Manhã"
+    },
+    {
+      "id": 8,
+      "tipo": "Roubo",
+      "bairro": "Nova Suíça",
+      "data": "2025-11-01",
+      "turno": "Noite"
+    },
+    {
+      "id": 9,
+      "tipo": "Assedio",
+      "bairro": "Centro",
+      "data": "2025-11-02",
+      "turno": "Tarde"
+    },
+    {
+      "id": 10,
+      "tipo": "Furto",
+      "bairro": "Pindorama",
+      "data": "2025-11-05",
+      "turno": "Manhã"
+    },
+    {
+      "id": 11,
+      "tipo": "Agressao",
+      "bairro": "Industrial",
+      "data": "2025-11-08",
+      "turno": "Noite"
+    },
+    {
+      "id": 12,
+      "tipo": "Vandalismo",
+      "bairro": "Centro",
+      "data": "2025-11-09",
+      "turno": "Tarde"
+    }
+  ]
+}

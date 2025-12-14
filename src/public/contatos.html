@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contatos de Emergência</title>
+  <link rel="stylesheet" href="assets/css/contatos.css" />
+  
+  <meta name="description" content="Lista de contatos de emergência e quando acionar cada serviço público." />
+</head>
+<body>
+  
+  <style>
+    header {
+    box-shadow: 0 3px 4px black;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: auto; 
+    padding: 18px 18px; 
+    background-color: rgb(182, 1, 1); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.logo-area {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.logo-area img {
+    height: 8.4rem; 
+    width: 8.4rem;
+}
+
+.logo-area h1 {
+    font-size: 2.3rem;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 3px 3px black;
+}
+
+.menu-header ul {
+    display: flex;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.menu-header li {
+    margin: 0 40px; 
+    font-size: 1.5rem;
+    text-shadow: 3px 3px black;
+
+}
+
+.menu-header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu-header a:hover {
+text-shadow: none;
+color: black;
+}
+
+.profile-photo img {
+    height: 6rem; 
+    width: 6rem;
+    border-radius: 50%; 
+    object-fit: cover; 
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+ /* Configuração geral do Footer */
+.site-footer {
+    background-color: #525252; /* Cor cinza escura similar à imagem */
+    color: #ffffff;            /* Texto branco */
+    padding: 20px 0;           /* Espaçamento interno (cima/baixo) */
+    font-family: Arial, sans-serif; /* Fonte padrão limpa */
+    width: 100%;
+    margin-top: auto;          /* Ajuda a empurrar o footer para baixo se usar flexbox no body */
+}
+
+.footer-content {
+    max-width: 1200px;         /* Limita a largura para não ficar muito esticado em telas grandes */
+    margin: 0 auto;            /* Centraliza o conteúdo na tela */
+    padding: 0 20px;           /* Margem lateral de segurança */
+}
+
+/* Estilo dos Links (Sobre nós, Contate-nos, etc) */
+.footer-nav {
+    display: flex;             /* Coloca os itens lado a lado */
+    gap: 30px;                 /* Espaço entre cada link */
+    margin-bottom: 20px;       /* Espaço entre os links e a linha divisória */
+    flex-wrap: wrap;           /* Permite que os links quebrem linha em celular */
+}
+
+.footer-nav a {
+    text-decoration: none;     /* Remove o sublinhado padrão do link */
+    color: #ffffff;            /* Cor do link branca */
+    font-size: 16px;
+    transition: color 0.3s;    /* Efeito suave ao passar o mouse */
+}
+
+.footer-nav a:hover {
+    color: #cccccc;            /* Muda levemente a cor ao passar o mouse */
+}
+
+/* Linha divisória fina */
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #777; /* Linha cinza clara sutil */
+    margin-bottom: 20px;
+}
+
+/* Área do Copyright */
+.footer-copyright {
+    text-align: center;        /* Centraliza o texto do copyright */
+    font-size: 14px;
+    color: #dcdcdc;            /* Um branco levemente mais apagado */
+}
+
+.link-voltar, .link-voltar a{
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.link-voltar a:hover {
+    color:rgb(182, 1, 1);
+}
+  </style>
+  
+  
+  <header>
+    <section class="header-content">
+        
+        <div class="logo-area">
+            <img src="assets/images/logotiaw.png" alt="Logo SafeZone">
+            <h1>SafeZone</h1>
+        </div>
+
+        <nav class="menu-header">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comunidade.html">Comunidade</a></li>
+                <li><a href="contatos.html">Contatos Urgentes</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+
+        <div class="profile-photo">
+            <img src="assets/images/fotoperfil.png" alt="Foto de Perfil">
+        </div>
+    </section>
+</header>
+
+<div class="link-voltar"><a href="index.html">← Voltar para Home</a></div>
+
+  <main>
+    <section class="info">
+      <h1>Contatos de Emergência</h1>
+      <p>Aqui se encontra uma lista dos possíveis números públicos a quem recorrer ajuda.</p>
+    </section>
+
+    <div class="carousel" id="carousel-main" aria-label="Carrossel informativo">
+      <button class="carousel-btn prev" aria-label="Anterior" type="button"><</button>
+      <div class="carousel-track" role="list">
+        <div class="carousel-slide" role="group" aria-roledescription="slide">
+          <div class="slide-content">
+            <img src="assets/images/policia_militar1.png" alt="Polícia Militar 1" class="slide-img" />
+            <div class="slide-text"><h4>Polícia Militar</h4></div>
+          </div>
+        </div>
+
+        <div class="carousel-slide" role="group" aria-roledescription="slide">
+          <div class="slide-content">
+            <img src="assets/images/policia_militar2.png" alt="Polícia Militar 2" class="slide-img" />
+            <div class="slide-text"><h4>Operações e patrulhamento</h4></div>
+          </div>
+        </div>
+
+        <div class="carousel-slide" role="group" aria-roledescription="slide">
+          <div class="slide-content">
+            <img src="assets/images/policia_civil2_png.png" alt="Polícia Civil" class="slide-img" />
+            <div class="slide-text"><h4>Polícia Civil</h4></div>
+          </div>
+        </div>
+
+        <div class="carousel-slide" role="group" aria-roledescription="slide">
+          <div class="slide-content">
+            <img src="assets/images/samu.png" alt="SAMU" class="slide-img" />
+            <div class="slide-text"><h4>SAMU</h4></div>
+          </div>
+        </div>
+
+        <div class="carousel-slide" role="group" aria-roledescription="slide">
+          <div class="slide-content">
+            <img src="assets/images/bombeiros.png" alt="Bombeiros" class="slide-img" />
+            <div class="slide-text"><h4>Bombeiros</h4></div>
+          </div>
+        </div>
+
+        <div class="carousel-slide" role="group" aria-roledescription="slide">
+          <div class="slide-content">
+            <img src="assets/images/denuncia_anonima.png" alt="Denúncia Anônima" class="slide-img" />
+            <div class="slide-text"><h4>Denúncia Anônima</h4></div>
+          </div>
+        </div>
+
+        <div class="carousel-slide" role="group" aria-roledescription="slide">
+          <div class="slide-content">
+            <img src="assets/images/guarda_civil.png" alt="Guarda Civil" class="slide-img" />
+            <div class="slide-text"><h4>Guarda Civil</h4></div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn next" aria-label="Próximo" type="button">></button>
+      <div class="carousel-dots" aria-hidden="false"></div>
+    </div>
+
+    <section class="contatos" id="listaContatos"></section>
+
+  </main>
+<script src="assets/js/app.js" defer></script>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <nav class="footer-nav">
+            <a href="sobre.html">Sobre nós</a>
+            <a href="contato.html">Contate-nos</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="termos.html">Termos e Condições</a>
+            <a href="privacidade.html">Declaração de Privacidade</a>
+        </nav>
+        
+        <hr class="footer-divider">
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 SafeZone. Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+

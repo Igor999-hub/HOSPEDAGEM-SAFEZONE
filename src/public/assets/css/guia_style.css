@@ -1,0 +1,295 @@
+/* ================================================= */
+/* ARQUIVO: guia_style.css                           */
+/* Estilos específicos para o Guia e Registro de B.O */
+/* ================================================= */
+
+:root {
+    --primary: #6a0000;
+    --primary-hover: #8a0000;
+    --bg: #e0e0e0;
+    --surface: #ffffff;
+}
+
+/* Garante footer encostado no final da viewport */
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; min-height: 100vh; }
+main.site-content, .guide-wrapper { flex: 1; }
+
+/* --- Container Principal --- */
+.guide-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Título e Botão --- */
+.title-container {
+    position: relative; 
+    text-align: center; 
+    margin-bottom: 30px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.title-container h2 { 
+    font-size: 2em; 
+    color: #333; 
+    margin: 0;
+}
+
+/* Botão Registrar B.O. */
+.bo-button {
+    position: absolute; 
+    right: 0;
+    background-color: var(--primary); 
+    color: white;
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 8px;
+    font-weight: bold; 
+    cursor: pointer; 
+    font-size: 1em;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bo-button:hover { 
+    background-color: var(--primary-hover); 
+}
+
+/* --- Barra de Ferramentas --- */
+.toolbar {
+    display: flex; 
+    gap: 12px; 
+    justify-content: center; 
+    margin-bottom: 30px; 
+    flex-wrap: wrap;
+}
+
+.toolbar input, .toolbar select {
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    width: 300px; 
+    max-width: 100%; 
+    font-size: 1rem;
+}
+
+/* --- Grid de Cards --- */
+.grid-container {
+    display: grid;
+    gap: 20px;
+    /* Três colunas por linha (3x3 quando houver 9 cards) */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Responsividade para 2 colunas e 1 coluna em telas menores */
+@media (max-width: 980px) {
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .grid-container { grid-template-columns: 1fr; }
+}
+/* NOME NOVO DA CLASSE PARA NÃO DAR CONFLITO */
+.guide-card {
+    background: var(--surface); 
+    border-radius: 15px; 
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s; 
+    display: flex; 
+    flex-direction: column;
+    /* Reseta configurações do estilo principal se houver herança */
+    width: auto; 
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.guide-card:hover { 
+    transform: translateY(-5px); 
+}
+
+.thumb { 
+    height: 160px; 
+    background: #ddd; 
+    overflow: hidden; 
+}
+
+.thumb img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.guide-card-body { 
+    padding: 15px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    flex: 1; 
+}
+
+.guide-card h3 { 
+    margin: 0; 
+    font-size: 1.1rem; 
+    color: var(--primary); 
+}
+
+.tag {
+    align-self: flex-start; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    color: white;
+    background: var(--primary); 
+    border-radius: 20px; 
+    padding: 5px 10px;
+}
+
+.btn-detail {
+    margin-top: auto; 
+    border: none; 
+    padding: 10px; 
+    border-radius: 8px;
+    background: #333; 
+    color: white; 
+    cursor: pointer; 
+    font-weight: bold;
+}
+
+.btn-detail:hover { 
+    background: #555; 
+}
+
+/* --- Modais --- */
+.bo-overlay {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center; 
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe; 
+    padding: 30px; 
+    border-radius: 12px;
+    width: 90%; 
+    max-width: 500px; 
+    position: relative;
+    color: #333;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 28px; 
+    cursor: pointer; 
+    color: #aaa;
+}
+
+.modal-link-button {
+    display: inline-block; 
+    background-color: var(--primary); 
+    color: white;
+    padding: 12px 20px; 
+    margin-top: 15px; 
+    text-decoration: none; 
+    border-radius: 5px;
+    width: 100%; 
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Dialog Detalhes */
+.detail-dialog {
+    width: min(700px, 90vw); 
+    border: none; 
+    border-radius: 15px; 
+    padding: 0;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4); 
+    margin: auto;
+}
+
+.detail-dialog::backdrop { 
+    background: rgba(0,0,0,0.5); 
+}
+
+.close-dialog {
+    position: absolute; 
+    right: 15px; 
+    top: 10px; 
+    border: none; 
+    background: none;
+    font-size: 2rem; 
+    cursor: pointer; 
+    color: #333;
+}
+
+#detailContent { 
+    padding: 25px; 
+}
+
+.detail-header { 
+    display: flex; 
+    gap: 20px; 
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+.detail-header img { 
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+.detail-section h4 { 
+    color: var(--primary); 
+    margin: 15px 0 5px; 
+}
+
+.obs { 
+    background: #fff3cd; 
+    padding: 10px; 
+    border-radius: 8px; 
+    border: 1px solid #ffeeba; 
+    margin-top: 15px; 
+    color: #856404;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .title-container { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    .bo-button { 
+        position: static; 
+        width: 100%; 
+        justify-content: center;
+    }
+}
+
+/* Afinar comportamento quando o container usa id + classe (página Guia) */
+#cards-container.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Altura consistente dos cards para melhor alinhamento em linhas */
+.guide-card { min-height: 300px; }
